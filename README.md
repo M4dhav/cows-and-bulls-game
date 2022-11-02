@@ -4,3 +4,6 @@
 (2/11/2022)
 Still working on the project, Code has some definite mistakes, thinking about another way to implement the game.
 Help is greatly appreciated. Im still a fresher in college with minmal knowledge of python.
+#Update 2:
+(Few hours later)
+Worked out the logic with help from a friend, code is still horribly bugged tho
