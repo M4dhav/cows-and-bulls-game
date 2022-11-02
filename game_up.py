@@ -1,5 +1,5 @@
 import random
-l3 = ["yes", "ye", "sure", "ok"]
+l3 = ["yes", "ye", "sure", "ok", "2", "y"]
 rules = '''1. A random 4 digit number will be picked by the computer, and you will have to guess it.
 2.For every digit that you have guessed correctly in the correct place, you have a cow. 
   For every digit that you have guessed correctly in the wrong place, you have a bull.
@@ -18,12 +18,16 @@ def play():
             guesses += 1
             l4 = []
             pnum =(input("Enter your guess: "))
+            if len(pnum) != 4:
+                print("Please enter a 4 digit number only")
+                print("Restarting the game now:")
+                play()
             if pnum == acnum:
                 print("Congratulations! You Win.")
                 print("You took {} guesses".format(guesses))
-                pagain =(input().lower())
+                pagain =(input("Would you like to play again?").lower())
                 if pagain in l3:
-                    continue
+                    play()
                 else:
                     print("Thanks for playing. I hope you play again later!")
                     break
@@ -53,6 +57,7 @@ print("*----------------------------------------------------------*")
 if i == 1:
     print('Rules:')
     print(rules)
+    print("*----------------------------------------------------------*")
     pl = input("Would you like to play now?:\n").lower()
     if pl in l3:
         play()
