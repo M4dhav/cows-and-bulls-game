@@ -1,17 +1,18 @@
 import random
-num = random.randint(1000, 9999+1)
-num = str(num)
 l3 = ["yes", "ye", "sure", "ok"]
 rules = '''1. A random 4 digit number will be picked by the computer, and you will have to guess it.
 2.For every digit that you have guessed correctly in the correct place, you have a cow. 
   For every digit that you have guessed correctly in the wrong place, you have a bull.
 3.Try to replay the game until you have the best score you can. Your number of guesses indicate the score. Lower the Guesses, Higher the score.'''
-def play(acnum):
+def play():
+        acnum = random.randint(1000, 9999+1)
+        acnum = str(acnum)
         guesses = 0
         l1 = []
         l2 = []
         l4 = []
         while True:
+            
             cows = 0
             bulls = 0
             guesses += 1
@@ -52,13 +53,13 @@ print("*----------------------------------------------------------*")
 if i == 1:
     print('Rules:')
     print(rules)
-    pl = input("Would you like to play now?:\n")
+    pl = input("Would you like to play now?:\n").lower()
     if pl in l3:
-        play(num)
+        play()
     else:
         print("Alright, have a nice day. Hope to see you here again.")
 elif i == 2:
-    play(num)
+    play()
 elif i == 3:
     print("Thanks for looking it over")
     exit()
