@@ -19,9 +19,13 @@ def play():
             l4 = []
             pnum =(input("Enter your guess: "))
             if len(pnum) != 4:
-                print("Please enter a 4 digit number only")
-                print("Restarting the game now:")
-                play()
+                print("*----------------------------------------------------------*")
+                print("ERROR!\n".center(35))
+                print("Please enter a 4 DIGIT NUMBER only")
+                print("Try Again:")
+                print("*----------------------------------------------------------*")
+                guesses -= 1
+                continue
             if pnum == acnum:
                 print("Congratulations! You Win.")
                 print("You took {} guesses".format(guesses))
