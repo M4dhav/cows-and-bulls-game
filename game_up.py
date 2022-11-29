@@ -1,4 +1,5 @@
 import random
+import time
 l3 = ["yes", "ye", "sure", "ok", "2", "y"]
 rules = '''1. A random 4 digit number will be picked by the computer, and you will have to guess it.
 2.For every digit that you have guessed correctly in the correct place, you have a cow. 
@@ -71,4 +72,5 @@ elif i == 2:
     play()
 elif i == 3:
     print("Thanks for looking it over")
+    time.sleep(3)
     exit()
