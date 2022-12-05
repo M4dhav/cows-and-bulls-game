@@ -86,4 +86,4 @@ elif i == 3:
     print("Thanks for looking it over")
     time.sleep(3)
     exit()
-#akdokowakd a, mmdwopko['kk[
+#akdok
