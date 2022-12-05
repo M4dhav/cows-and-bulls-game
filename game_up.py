@@ -19,22 +19,34 @@ def play():
             guesses += 1
             l4 = []
             pnum =(input("Enter your guess: "))
+            try:
+                int(pnum)
+            except:
+                print("*----------------------------------------------------------*")
+                print("ERROR!\n".center(35))
+                print("Please enter NUMBERS only!!")
+                print("Try Again:".center(33))
+                print("*----------------------------------------------------------*")
+                guesses -= 1
+                continue
             if len(pnum) != 4:
                 print("*----------------------------------------------------------*")
                 print("ERROR!\n".center(35))
-                print("Please enter a 4 DIGIT NUMBER only")
-                print("Try Again:")
+                print("Please enter a 4 DIGIT NUMBER only!!")
+                print("Try Again:".center(33))
                 print("*----------------------------------------------------------*")
                 guesses -= 1
                 continue
             if pnum == acnum:
                 print("Congratulations! You Win.")
                 print("You took {} guesses".format(guesses))
-                pagain =(input("Would you like to play again?").lower())
+                pagain =(input("Would you like to play again?\n").lower())
                 if pagain in l3:
                     play()
                 else:
+                    time.sleep(0.5)
                     print("Thanks for playing. I hope you play again later!")
+                    time.sleep(3)
                     break
             l1=list(pnum)
             l2=list(acnum)
