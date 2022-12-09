@@ -86,4 +86,3 @@ elif i == 3:
     print("Thanks for looking it over")
     time.sleep(3)
     exit()
-    #j lahihji e3
